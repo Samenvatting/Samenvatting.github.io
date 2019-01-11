@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui">
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>Samenvattingen</title>
+	<link rel="stylesheet" type="text/css" href="samenvattingen.css">
+	<meta name="theme-color" content="#C70450">
+	<link rel="manifest" href="/manifest.json">
+</head>
+<body>
+<div id="summSwipe">
+</div>
+<div id="navBarFull" onclick="closeNav()">
+</div>
+<div class="navBar" id="navBar">
+	<a><img class="closebtn" src="icons/cross.png" onclick="closeNav()"></a>
+	<div class="info">
+			<p id="module">Module 4</p>
+			<div class="jaar">
+				<select id="kiesJaar" onchange="changeJaar()">
+					<option value="5">5de</option>
+					<option value="6" selected>6de</option>
+				</select>
+			</div>	
+			<div class="hline"></div>	
+		</div>
+	<div class="list1 list">
+		<a href="#" class="navList a1" onclick="home()"><img src="icons/home.png" class="icon">Home</a>
+		<a href="#" class="navList a3" onclick="show('#aardM1')"><img src="icons/aard.png" class="icon">Aardrijkskunde</a>
+		<a href="#" class="navList a4" onclick="show('#bioM1')"><img src="icons/bio.png" class="icon">Biologie</a>
+		<a href="#" class="navList a5" onclick="show('#chemM1')"><img src="icons/chem.png" class="icon">Chemie</a>
+		<a href="#" class="navList a6" onclick="show('#engM1')"><img src="icons/eng.png" class="icon">Engels</a>
+		<a href="#" class="navList a7" onclick="show('#fransM1')"><img src="icons/frans.png" class="icon">Frans</a>
+		<a href="#" class="navList a8" onclick="show('#fysM1')"><img src="icons/fys.png" class="icon">Fysica</a>
+		<a href="#" class="navList a9" onclick="show('#geschM1')"><img src="icons/gesch.png" class="icon">Geschiedenis</a>
+   		<a href="#" class="navList a10" onclick="show('#nedM1')"><img src="icons/ned.png" class="icon">Nederlands</a>
+		<a href="#" class="navList a11" onclick="show('#wiskM1')"><img src="icons/wisk.png" class="icon">Wiskunde</a>
+	</div>
+	<div class="list2 list">
+		<a href="#" class="navList a1" onclick="home()"><img src="icons/home.png" class="icon">Home</a>
+		<a href="#" class="navList a3" onclick="show('#aardM2')"><img src="icons/aard.png" class="icon">Aardrijkskunde</a>
+		<a href="#" class="navList a4" onclick="show('#bioM2')"><img src="icons/bio.png" class="icon">Biologie</a>
+		<a href="#" class="navList a5" onclick="show('#chemM2')"><img src="icons/chem.png" class="icon">Chemie</a>
+		<a href="#" class="navList a6" onclick="show('#engM2')"><img src="icons/eng.png" class="icon">Engels</a>
+		<a href="#" class="navList a7" onclick="show('#fransM2')"><img src="icons/frans.png" class="icon">Frans</a>
+		<a href="#" class="navList a8" onclick="show('#fysM2')"><img src="icons/fys.png" class="icon">Fysica</a>
+		<a href="#" class="navList a9" onclick="show('#geschM2')"><img src="icons/gesch.png" class="icon">Geschiedenis</a>
+   		<a href="#" class="navList a10" onclick="show('#nedM2')"><img src="icons/ned.png" class="icon">Nederlands</a>
+		<a href="#" class="navList a11" onclick="show('#wiskM2')"><img src="icons/wisk.png" class="icon">Wiskunde</a>
+	</div>
+	<div class="list3 list">
+		<a href="#" class="navList a1" onclick="home()"><img src="icons/home.png" class="icon">Home</a>
+		<a href="#" class="navList a3" onclick="show('#aardM3')"><img src="icons/aard.png" class="icon">Aardrijkskunde</a>
+		<a href="#" class="navList a4" onclick="show('#bioM3')"><img src="icons/bio.png" class="icon">Biologie</a>
+		<a href="#" class="navList a5" onclick="show('#chemM3')"><img src="icons/chem.png" class="icon">Chemie</a>
+		<a href="#" class="navList a6" onclick="show('#engM3')"><img src="icons/eng.png" class="icon">Engels</a>
+		<a href="#" class="navList a7" onclick="show('#fransM3')"><img src="icons/frans.png" class="icon">Frans</a>
+		<a href="#" class="navList a8" onclick="show('#fysM3')"><img src="icons/fys.png" class="icon">Fysica</a>
+		<a href="#" class="navList a9" onclick="show('#geschM3')"><img src="icons/gesch.png" class="icon">Geschiedenis</a>
+   		<a href="#" class="navList a10" onclick="show('#nedM3')"><img src="icons/ned.png" class="icon">Nederlands</a>
+		<a href="#" class="navList a11" onclick="show('#wiskM3')"><img src="icons/wisk.png" class="icon">Wiskunde</a>
+	</div>
+	<div class="list4 list">
+		<a href="#" class="navList a1" onclick="home()"><img src="icons/home.png" class="icon">Home</a>
+		<a href="#" class="navList a3" onclick="show('#aardM4')"><img src="icons/aard.png" class="icon">Aardrijkskunde</a>
+		<a href="#" class="navList a4" onclick="show('#bioM4')"><img src="icons/bio.png" class="icon">Biologie</a>
+		<a href="#" class="navList a5" onclick="show('#chemM4')"><img src="icons/chem.png" class="icon">Chemie</a>
+		<a href="#" class="navList a6" onclick="show('#engM4')"><img src="icons/eng.png" class="icon">Engels</a>
+		<a href="#" class="navList a7" onclick="show('#fransM4')"><img src="icons/frans.png" class="icon">Frans</a>
+		<a href="#" class="navList a8" onclick="show('#fysM4')"><img src="icons/fys.png" class="icon">Fysica</a>
+		<a href="#" class="navList a9" onclick="show('#geschM4')"><img src="icons/gesch.png" class="icon">Geschiedenis</a>
+   		<a href="#" class="navList a10" onclick="show('#nedM4')"><img src="icons/ned.png" class="icon">Nederlands</a>
+		<a href="#" class="navList a11" onclick="show('#wiskM4')"><img src="icons/wisk.png" class="icon">Wiskunde</a>
+	</div>
+	<div class="list5 list">
+		<a href="#" class="navList a1" onclick="home()"><img src="icons/home.png" class="icon">Home</a>
+		<a href="#" class="navList a3" onclick="show('#aardM5')"><img src="icons/aard.png" class="icon">Aardrijkskunde</a>
+		<a href="#" class="navList a4" onclick="show('#bioM5')"><img src="icons/bio.png" class="icon">Biologie</a>
+		<a href="#" class="navList a5" onclick="show('#chemM5')"><img src="icons/chem.png" class="icon">Chemie</a>
+		<a href="#" class="navList a6" onclick="show('#engM5')"><img src="icons/eng.png" class="icon">Engels</a>
+		<a href="#" class="navList a7" onclick="show('#fransM5')"><img src="icons/frans.png" class="icon">Frans</a>
+		<a href="#" class="navList a8" onclick="show('#fysM5')"><img src="icons/fys.png" class="icon">Fysica</a>
+		<a href="#" class="navList a9" onclick="show('#geschM5')"><img src="icons/gesch.png" class="icon">Geschiedenis</a>
+   		<a href="#" class="navList a11" onclick="show('#nedM5')"><img src="icons/ned.png" class="icon">Nederlands</a>
+		<a href="#" class="navList a12" onclick="show('#wiskM5')"><img src="icons/wisk.png" class="icon">Wiskunde</a>
+	</div>
+	<div class="list6 list">
+		<a href="#" class="navList a1" onclick="home()"><img src="icons/home.png" class="icon">Home</a>
+		<a href="#" class="navList a3" onclick="show('#aardM6')"><img src="icons/aard.png" class="icon">Aardrijkskunde</a>
+		<a href="#" class="navList a4" onclick="show('#bioM6')"><img src="icons/bio.png" class="icon">Biologie</a>
+		<a href="#" class="navList a5" onclick="show('#chemM6')"><img src="icons/chem.png" class="icon">Chemie</a>
+		<a href="#" class="navList a6" onclick="show('#engM6')"><img src="icons/eng.png" class="icon">Engels</a>
+		<a href="#" class="navList a7" onclick="show('#fransM6')"><img src="icons/frans.png" class="icon">Frans</a>
+		<a href="#" class="navList a8" onclick="show('#fysM6')"><img src="icons/fys.png" class="icon">Fysica</a>
+		<a href="#" class="navList a9" onclick="show('#geschM6')"><img src="icons/gesch.png" class="icon">Geschiedenis</a>
+   		<a href="#" class="navList a11" onclick="show('#nedM6')"><img src="icons/ned.png" class="icon">Nederlands</a>
+		<a href="#" class="navList a12" onclick="show('#wiskM6')"><img src="icons/wisk.png" class="icon">Wiskunde</a>
+	</div>
+</div>
+<div class="homeAll">
+	<div class="openTopNav" id="openTopNav"></div>
+	<div onclick="openNav()" class="nav">
+		<a class="a_nav a_nav_menu" onclick="openNav()"><p>&#9776;</p></a>
+		<div id="nav5de">
+			<a class="a_nav m1" onclick="m1()"><p>Module 1</p></a> 
+			<a class="a_nav m2" onclick="m2()"><p>Module 2</p></a> 
+			<a class="a_nav m3" onclick="m3()"><p>Module 3</p></a>
+		</div>
+		<div id="nav6de">
+			<a class="a_nav m4" onclick="m4()"><p>Module 4</p></a> 
+			<a class="a_nav m5" onclick="m5()"><p>Module 5</p></a>
+			<a class="a_nav m6" onclick="m6()"><p>Module 6</p></a>
+		</div> 
+	</div>
+</div>
+<div id="closePopup" onclick="closeAll()"></div>
+<div><img id="loading" src="icons/loading2.gif"></div>
+<div class="home">
+	<div class="ad">
+		<table id="table">
+		    <tr>
+		    	<th></th>
+			    <th>MA</th>
+			    <th>DI</th>
+			    <th>WO</th>
+			    <th>DO</th>
+			    <th>VR</th>
+		    </tr>
+		    <tr>
+		    	<td>1</td>
+			    <td><img src="icons/ned.png" class="icon2">&nbsp; &nbsp; Ned</td>
+			    <td><img src="icons/gesch.png" class="icon2">&nbsp; &nbsp; Gesch</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+			    <td><img src="icons/frans.png" class="icon2">&nbsp; &nbsp; Frans</td>
+			    <td><img src="icons/lo.png" class="icon2">&nbsp; &nbsp; LO</td>
+		    </tr>
+		    <tr>
+		    	<td>2</td>
+			    <td><img src="icons/eng.png" class="icon2">&nbsp; &nbsp; Eng</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+			    <td><img src="icons/ned.png" class="icon2">&nbsp; &nbsp; Ned</td>
+			    <td><img src="icons/lo.png" class="icon2">&nbsp; &nbsp; LO</td>
+		    </tr>
+	   	    <tr>
+	   	    	<td>3</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+			    <td><img src="icons/ned.png" class="icon2">&nbsp; &nbsp; Ned</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+			    <td><img src="icons/chem.png" class="icon2">&nbsp; &nbsp; Chem</td>
+	  	    </tr>
+		    <tr>
+		    	<td>4</td>
+			    <td><img src="icons/fys.png" class="icon2">&nbsp; &nbsp; Fys</td>
+			    <td><img src="icons/frans.png" class="icon2">&nbsp; &nbsp; Frans</td>
+			    <td><img src="icons/aard.png" class="icon2">&nbsp; &nbsp; Aard</td>
+			    <td><img src="icons/gesch.png" class="icon2">&nbsp; &nbsp; Gesch</td>
+			    <td><img src="icons/fys.png" class="icon2">&nbsp; &nbsp; Fys</td>
+		    </tr>
+		    <tr>
+		    	<td>5</td>
+			    <td><img src="icons/bio.png" class="icon2">&nbsp; &nbsp; Bio</td>
+			    <td><img src="icons/eng.png" class="icon2">&nbsp; &nbsp; Eng</td>
+			    <td></td>
+			    <td><img src="icons/atl.png" class="icon2">&nbsp; &nbsp; Atl</td>
+			    <td><img src="icons/wisk.png" class="icon2">&nbsp; &nbsp; Wisk</td>
+		    </tr>
+		    <tr>
+		    	<td>6</td>
+			    <td><img src="icons/frans.png" class="icon2">&nbsp; &nbsp; Frans</td>
+			    <td><img src="icons/levens.png" class="icon2">&nbsp; &nbsp; Levens</td>
+			    <td></td>
+			    <td><img src="icons/atl.png" class="icon2">&nbsp; &nbsp; Atl</td>
+			    <td><img src="icons/ned.png" class="icon2">&nbsp; &nbsp; Ned</td>
+		    </tr>
+		    <tr>
+		    	<td>7</td>
+			    <td><img src="icons/chem.png" class="icon2">&nbsp; &nbsp; Chem</td>
+			    <td><img src="icons/levens.png" class="icon2">&nbsp; &nbsp; Levens</td>
+			    <td></td>
+			    <td><img src="icons/atl.png" class="icon2">&nbsp; &nbsp; Atl</td>
+			    <td><img src="icons/bio.png" class="icon2">&nbsp; &nbsp; Bio</td>
+		    </tr>
+		</table>
+	</div>
+	<div id="txt" class="txt">
+		<a href="#" class="titel3" onclick="closeHelp()">SAMENVATTINGEN</a>
+		<p id="introText">
+			Dit is de website van Abdellah, op deze website staan alle samenvattingen voor het 5de & 6de jaar gemaakt door Abdellah. Je vindt deze vanboven bij de "module" knoppen, onderverdeeld per vak. Je kan samenvattingen openen door op de naam te duwen, of je kan ze downloaden. Voor verdere hulp kan je <a href="#" class="titel2" onclick="help()">hier</a> duwen, voor het lessenrooster kan je <a href="#" class="titel2" onclick="rooster()">hier</a> duwen. <a href="https://ka1hasselt.smartschool.be/login" class="titel2" target="blank">Smartschool</a>.
+		</p>
+		<table id="table2">
+		    <tr>
+		    	<th><img class="cross" src="icons/cross.png" onclick="rooster2()"></th>
+			    <th>MA</th>
+			    <th>DI</th>
+			    <th>WO</th>
+			    <th>DO</th>
+			    <th>VR</th>
+		    </tr>
+		    <tr>
+		    	<td>1</td>
+			    <td>Ned</td>
+			    <td>Gesch</td>
+			    <td>Wisk</td>
+			    <td>Frans</td>
+			    <td>LO</td>
+		    </tr>
+		    <tr>
+		    	<td>2</td>
+			    <td>Eng</td>
+			    <td>Wisk</td>
+			    <td>Wisk</td>
+			    <td>Ned</td>
+			    <td>LO</td>
+		    </tr>
+	   	    <tr>
+	   	    	<td>3</td>
+			    <td>Wisk</td>
+			    <td>Wisk</td>
+			    <td>Ned</td>
+			    <td>Wisk</td>
+			    <td>Chem</td>
+	  	    </tr>
+		    <tr>
+		    	<td>4</td>
+			    <td>Fys</td>
+			    <td>Frans</td>
+			    <td>Aard</td>
+			    <td>Gesch</td>
+			    <td>Fys</td>
+		    </tr>
+		    <tr>
+		    	<td>5</td>
+			    <td>Bio</td>
+			    <td>Eng</td>
+			    <td></td>
+			    <td>Atl</td>
+			    <td>Wisk</td>
+		    </tr>
+		    <tr>
+		    	<td>6</td>
+			    <td>Frans</td>
+			    <td>Levens</td>
+			    <td></td>
+			    <td>Atl</td>
+			    <td>Ned</td>
+		    </tr>
+		    <tr>
+		    	<td>7</td>
+			    <td>Chem</td>
+			    <td>Levens</td>
+			    <td></td>
+			    <td>Atl</td>
+			    <td>Bio</td>
+		    </tr>
+		</table>
+		<font id="helpChoice" class="helpTxt">
+			<p>Als uw antwoord hieronder niet te vinden is kunt u Lander Moors contacteren op smartschool.</p>
+			<a href="#" onclick="jaarHelp()" class="titel">- Hoe kan ik van jaar wisselen?</a> <br>
+			<a href="#" onclick="summHelp()" class="titel">- Ik vind de samenvatting die ik zoek niet?</a> <br>
+			<a href="#" onclick="lesHelp()" class="titel">- Het lessenrooster klopt niet?</a> <br>
+			<a href="#" onclick="summHelp2()" class="titel">- Een samenvatting wilt niet openen/downloaden?</a>
+		
+		</font>
+		<p id="jaarHelp" class="helpTxt">
+			Open eenderwelke module en kijk linksboven, langs de naam van de module (B.V. Module 4) zal je een vakje zien staan met "5de" of "6de" erin, duw erop en kies welk jaar je wilt.
+			
+		</p>
+		<p id="summHelp" class="helpTxt">
+			Als het een samenvatting is voor een toets die nog moet komen is het waarschijnlijk dat Abdellah die nog niet heeft gemaakt, wacht even of stuur een bericht naar Abdellah. Als het een samenvatting is voor een toets die al geweest is kan je proberen alle samenvattingen voor dat vak nog eens af te gaan, maar het is waarschijnlijk dat Abdellah deze samenvatting nooit heeft gemaakt.
+			
+		</p>
+		<p id="lesHelp" class="helpTxt">
+			Dit komt omdat het het lessenrooster voor 6WEWA is, de klas van Abdellah, als je wilt dat jouw lessenrooster ook beschikbaar is op de website kan je dat aanvragen bij Lander Moors op smartschool.
+		</p>
+		<p id="summHelp2" class="helpTxt">
+			Kijk na of je internet wel werkt, of probeer om de website te herladen, als dit niet lukt kan je Lander Moors een berichtje sturen op smartschool om het op te lossen.
+		</p>
+	</div>
+	<div>
+		<div id="obj" align="middle" class="obj">
+	  		<div class="changeText">
+	  			<div id="change6">
+	  				<p class="changeLogTxt">
+						<font class="titel">Laatst toegevoegde samenvattingen:</font><br><br>
+						⭐ 16/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_rijreeks_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_rijreeks_schema.pdf')">Schema rijen en reeksen </a><br><br>
+						⭐ 16/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_discreet_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_discreet_schema.pdf')">Schema discrete wiskunde </a><br><br>
+						⭐ 16/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_func_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_func_schema.pdf')">Schema functies </a><br><br>
+						⭐ 15/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_func_irr.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_func_irr.pdf')">Irrationale functies </a><br><br>
+						⭐ 15/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_bewijzen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_bewijzen.pdf')">Bewijzen </a><br><br>
+						⭐ 15/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_k_overzicht.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_overzicht.pdf')">K Overzicht </a><br><br>
+						⭐ 14/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_rijreeks.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_rijreeks.pdf')">Rijen en reeksen </a><br><br>
+						⭐ 10/12/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_gon_verg.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_verg.pdf')">Goniometrische vergelijkingen </a><br><br>
+						⭐ 08/12/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_6de/geschM4_deel3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/geschM4_deel3.pdf')">Deel 3 </a><br><br>
+						⭐ 08/12/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_6de/geschM4_deel2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/geschM4_deel2.pdf')">Deel 2 </a><br><br>
+						⭐ 08/12/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_6de/geschM4_deel1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/geschM4_deel1.pdf')">Deel 1 </a><br><br>
+						⭐ 08/12/18: Nieuwe samenvatting aardrijkskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/aardM4_examen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/aardM4_examen.pdf')">Examen </a><br><br>
+						⭐ 08/12/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_6de/fysM4_H3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_H3.pdf')">Hoofdstuk 3 </a><br><br>
+						⭐ 08/12/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_6de/fysM4_zelftest.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_zelftest.pdf')">Zelftest ingangsexamen </a><br><br>
+						⭐ 07/12/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_6de/chemM4_titraties.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_titraties.pdf')">Titraties </a><br><br>
+						⭐ 07/12/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_6de/chemM4_reactietypen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_reactietypen.pdf')">Reactietypen </a><br><br>
+						⭐ 07/12/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_6de/chemM4_redoxreacties.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_redoxreacties.pdf')">Redoxreacties </a><br><br>
+						⭐ 29/11/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_gon_verloop.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_verloop.pdf')">Goniometrische functies: verloop </a><br><br>
+						⭐ 27/11/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_gon_cyclo.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_cyclo.pdf')">Cyclometrische functies </a><br><br>
+						⭐ 22/11/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_6de/nedM4_HO2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/nedM4_HO2.pdf')">HO 2 </a><br><br>
+						⭐ 19/11/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_gon_func.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_func.pdf')">Goniometrische functies </a><br><br>
+						⭐ 21/10/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_6de/fysM4_H2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_H2.pdf')">H2: De eendimensionale beweging </a><br><br>
+						⭐ 17/10/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_ict.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_ict.pdf')">ICT Irrationale functies </a><br><br>
+						⭐ 17/10/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_6de/nedM4_TT2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/nedM4_TT2.pdf')">Taaltaak 2 </a><br><br>
+						⭐ 14/10/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_k_hyperbolen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_hyperbolen.pdf')">K Hyperbolen </a><br><br>
+						⭐ 28/09/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_k_ellips.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_ellips.pdf')">K Ellips </a><br><br>
+						⭐ 19/09/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_6de/chemM4_overzicht_titraties.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_overzicht_titraties.pdf')">Overzicht titraties </a><br><br>
+						⭐ 10/09/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_6de/bioM4_evo.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_evo.pdf')">Evolutie </a><br><br>
+						⭐ 10/09/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_6de/fysM4_H1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_H1.pdf')">H1: Beschrijving van een beweging </a><br><br>
+						⭐ 10/09/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_6de/bioM4_erf.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_erf.pdf')">Erfelijkheidsonderzoek bij mens </a><br><br>
+						⭐ 10/09/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_6de/bioM4_chrom.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_chrom.pdf')">Chromosomale verklaring overerving </a><br><br>
+						⭐ 06/09/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_6de/bioM4_dihybride.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_dihybride.pdf')">Dihybride kruising </a><br><br>
+						⭐ 06/09/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_6de/bioM4_bijz_geval.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_bijz_geval.pdf')">Bijzondere gevallen </a><br><br>
+						⭐ 06/09/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_k_inleiding.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_inleiding.pdf')">K Inleiding </a><br><br>
+						⭐ 06/09/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_6de/wiskM4_k_parabolen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_parabolen.pdf')">K Parabolen </a><br><br>
+						⭐ 06/09/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_6de/bioM4_monohybride.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_monohybride.pdf')">Monohybride kruising </a>
+	 				</p>
+	 			</div>
+	 			<div id="change5">
+		  			<p class="changeLogTxt">
+						<font class="titel">Laatst toegevoegde samenvattingen:</font><br><br>
+						⭐ 19/06/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_5de/fysM3_h9.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM3_h9.pdf')">Hoofdstuk 9 </a><br><br>
+						⭐ 19/06/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_5de/geschM3_kunst.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_kunst.pdf')">Schema & flowchart kunststromingen </a><br><br>
+						⭐ 19/06/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_5de/geschM3_stroom.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_stroom.pdf')">Stroom & tegenstroom in cultuur </a><br><br>
+						⭐ 18/06/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_5de/bioM3_enzymen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM3_enzymen.pdf')">Enzymen schema toepassingen </a><br><br>
+						⭐ 17/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_verloop.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_verloop.pdf')">Zelftest Verloop </a><br><br>
+						⭐ 17/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_analyse.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_analyse.pdf')">Zelftest Analyse </a><br><br>
+						⭐ 17/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_limit.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_limit.pdf')">Zelftest Limieten </a><br><br>
+						⭐ 17/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_cont.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_cont.pdf')">Zelftest Continuïteit </a><br><br>
+						⭐ 17/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_overzicht.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_overzicht.pdf')">Overzicht Ruimtemeetkunde</a><br><br>
+						⭐ 16/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_verloop.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_verloop.pdf')">Verloop van Functies</a><br><br>
+						⭐ 14/06/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_mondeling.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_mondeling.pdf')">Mondeling Uitgeschreven</a><br><br>
+						⭐ 14/06/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_kort_schema_stromingen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_kort_schema_stromingen.pdf')">Kort Schema Literaire Stromingen</a><br><br>
+						⭐ 14/06/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_5de/geschM3_democratie.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_democratie.pdf')">Democratievormen na WOI</a><br><br>
+						⭐ 14/06/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_max.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_max.pdf')">Max Havelaar</a><br><br>
+						⭐ 11/06/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_zomerhuis.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_zomerhuis.pdf')">Zomerhuis met zwembad</a><br><br>
+						⭐ 11/06/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_5de/chemM3_examen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_examen.pdf')">Examen</a><br><br>
+						⭐ 09/06/18: Nieuwe samenvattingen nederlands (6): <a class="titel" href="#" onclick="show('#nedM3')">Examen</a><br><br>
+						⭐ 06/06/18: Nieuwe samenvatting aardrijkskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/aardM3_ocean.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM3_ocean.pdf')">Oceanografie</a><br><br>
+						⭐ 02/06/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_H6-7.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_H6-7.pdf')">Ruimtemeetkunde H6-7</a><br><br>
+						⭐ 01/06/18: Nieuwe samenvatting aardrijkskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/aardM3_bodem.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM3_bodem.pdf')">Bodemkunde</a><br><br>
+						⭐ 27/05/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_5de/fysM3_lorentz.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM3_lorentz.pdf')">Hoofdstuk 8</a><br><br>
+						⭐ 27/05/18: Nieuwe samenvatting aardrijkskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/aardM3_dienst.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM3_dienst.pdf')">De aarde in dienst van de mens</a><br><br>
+						⭐ 27/05/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_exam.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_exam.pdf')">Examen</a><br><br>
+						⭐ 26/05/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_5de/bioM3_fotosynthese.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM3_fotosynthese.pdf')">Fotosynthese & Celademhaling</a><br><br>
+						⭐ 26/05/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_H4-5.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_H4-5.pdf')">Ruimtemeetkunde H4-5</a><br><br>
+						⭐ 24/05/18: Nieuwe zelftest LO: <a class="titel" href="#" onclick="openSumm('summ_5de/summ_LO_test.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/summ_LO_test.pdf')">LO Zelftest</a><br><br>
+						⭐ 21/05/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_5de/chemM3_zuren_basen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_zuren_basen.pdf')">Zuren en Basen</a><br><br>
+						⭐ 21/05/18: Nieuwe samenvattingen LO (6): <a class="titel" href="#" onclick="show('#LO')">LO</a><br><br>
+						⭐ 21/05/18: Nieuwe samenvattingen engels (7): <a class="titel" href="#" onclick="show('#engM3')">Voorbereiding Openboek Toets</a><br><br>
+						⭐ 18/05/18: Nieuwe samenvatting frans: <a class="titel" href="#" onclick="openSumm('summ_5de/fransM3_aard_VZ.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM3_aard_VZ.pdf')">Frans: Aardrijkskundige Voorzetsels</a><br><br>
+						⭐ 16/05/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_afg_benaderen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_benaderen.pdf')">Afgeleiden: Korte Benaderings Methode</a><br><br>
+						⭐ 10/05/18: Nieuwe samenvatting geschiedenis: <a class="titel" href="#" onclick="openSumm('summ_5de/geschM3_WO1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_WO1.pdf')">Wereld Oorlog 1</a><br><br>
+						⭐ 10/05/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_afg_3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_3.pdf')">Afgeleiden 3</a><br><br>
+						⭐ 10/05/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_afg_2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_2.pdf')">Afgeleiden 2</a><bR><br>
+						⭐ 19/04/18: Nieuwe samenvatting chemie (Module 2): <a class="titel" href="#" onclick="openSumm('summ_5de/chemM2_even_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM2_even_schema.pdf')">Schema Chemisch Evenwicht</a><br><br>
+						⭐ 06/05/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_lyriek_test.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_lyriek_test.pdf')">Zelftest Lyriek</a><br><br>
+						⭐ 05/05/18: Nieuwe samenvatting biologie: <a class="titel" href="#" onclick="openSumm('summ_5de/bioM3_meta.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM3_meta.pdf')">Metabolisme</a><br><br>
+						⭐ 05/05/18: Nieuwe samenvatting fysica: <a class="titel" href="#" onclick="openSumm('summ_5de/fysM3_H6_7.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM3_H6_7.pdf')">Hoofdstuk 6 & 7</a><br><br>
+						⭐ 04/05/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_lyriek.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_lyriek.pdf')">Lyriek</a><br><br>
+						⭐ 01/05/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_afg_1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_1.pdf')">Afgeleiden 1</a><br><br>
+						⭐ 30/04/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_H1-3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_H1-3.pdf')">Ruimtemeetkunde H1-3</a><br><br>
+						⭐ 24/04/18: Nieuwe samenvatting nederlands: <a class="titel" href="#" onclick="openSumm('summ_5de/nedM3_rev.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_rev.pdf')">Tekstrevisie</a><br><br>
+						⭐ 24/04/18: Nieuwe samenvatting frans: <a class="titel" href="#" onclick="openSumm('summ_5de/fransM3_VP_2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM3_VP_2.pdf')">Verbe Pronominaux 2</a><br><br>
+						⭐ 24/04/18: Nieuwe samenvatting frans: <a class="titel" href="#" onclick="openSumm('summ_5de/fransM3_VP_1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM3_VP_1.pdf')">Verbe Pronominaux 1</a><br><br>
+						⭐ 19/04/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_5de/chemM3_lewis.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_lewis.pdf')">Het geheim voor de perfecte Lewisstructuur</a><br><br>
+						⭐ 10/04/18: Nieuwe samenvatting wiskunde: <a class="titel" href="#" onclick="openSumm('summ_5de/wiskM3_limit.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_limit.pdf')">Limieten</a><br><br>
+						⭐ 23/03/18: Nieuwe samenvatting chemie: <a class="titel" href="#" onclick="openSumm('summ_5de/chemM3_moleculen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_moleculen.pdf')">Moleculen</a><br><br>
+						<div class="hline"></div>
+						<br><font style="font-weight: bold;">Vanaf hier geen directe links naar de samenvattingen meer, sorry.</font><br><br>
+						<div class="hline"></div><br><br>
+						⭐ 14/03/18: Alle samenvattingen voor module 1 & 2 toegevoegd<br><br>
+						⭐ 04/03/18: Nieuwe samenvatting biologie: Examen M2<br><br>
+						⭐ 04/03/18: Nieuwe samenvatting engels: Examen M2<br><br>
+						⭐ 04/03/18: Nieuwe samenvatting nederlands: Examen M2<br><br>
+						⭐ 03/03/18: Nieuwe samenvatting aardrijkskunde: Examen M2<br><br>
+						⭐ 28/02/18: Nieuwe samenvatting wiskunde: Geogebra<br><br>
+						⭐ 25/02/18: Nieuwe samenvatting geschiedenis: Imperialisme<br><br>
+						⭐ 25/02/18: Nieuwe samenvatting nederlands: Het Diner<br><br>
+						⭐ 23/02/18: Nieuwe samenvatting aardrijkskunde: HO 3 Hoofdstukken<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting geschiedenis: Sociale Strijd<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting engels: Unit 3 + 4<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting fysica: Module 2<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting frans: Pronom Relatif + Negation<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting biologie: Module 2<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting chemie: Chemisch Evenwicht<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting chemie: Atomen en Moleculen<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting wiskunde: Goniometrie<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting wiskunde: Complexe Getallen<br><br>
+						⭐ 22/02/18: Nieuwe samenvatting wiskunde: Reële Functies
+		 			</p>
+		 		</div>
+			</div>
+		</div>
+	</div>
+</div>
+<object id="pdf" class="pdf" data=""></object>
+<!--
+
+	MODULE 4
+
+-->
+<div id="aardM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Aardrijkskunde (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/aardM4_examen.pdf" download="Samenvatting aardrijkskunde examen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/aardM4_examen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/aardM4_examen.pdf')">Examen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="bioM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Biologie (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/bioM4_evo.pdf" download="Samenvatting evolutie"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/bioM4_evo.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_evo.pdf')">Evolutie</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/bioM4_erf.pdf" download="Samenvatting erfelijkheidsonderzoek bij mens"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/bioM4_erf.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_erf.pdf')">Erfelijkheidsonderzoek bij mens</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/bioM4_chrom.pdf" download="Samenvatting chromosomale verklaring overerving"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/bioM4_chrom.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_chrom.pdf')">Chromosomale verklaring overerving</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/bioM4_monohybride.pdf" download="Samenvatting monohybride kruising"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/bioM4_monohybride.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_monohybride.pdf')">Monohybride kruising</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/bioM4_dihybride.pdf" download="Samenvatting dihybride kruising"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/bioM4_dihybride.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_dihybride.pdf')">Dihybride kruising</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/bioM4_bijz_geval.pdf" download="Bijzondere gevallen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/bioM4_bijz_geval.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/bioM4_bijz_geval.pdf')">Bijzondere gevallen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="chemM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Chemie (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/chemM4_titraties.pdf" download="Samenvatting titraties"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/chemM4_titraties.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_titraties.pdf')">Titraties</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/chemM4_reactietypen.pdf" download="Samenvatting reactietypen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/chemM4_reactietypen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_reactietypen.pdf')">Reactietypen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/chemM4_redoxreacties.pdf" download="Samenvatting redoxreacties"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/chemM4_redoxreacties.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_redoxreacties.pdf')">Redoxreacties</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/chemM4_overzicht_titraties.pdf" download="Overzicht titraties"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/chemM4_overzicht_titraties.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/chemM4_overzicht_titraties.pdf')">Overzicht titraties</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="engM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Engels (M4)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fransM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Frans (M4)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fysM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Fysica (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/fysM4_H1.pdf" download="Samenvatting H1: Beschrijving van een beweging"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/fysM4_H1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_H1.pdf')">H1: Beschrijving van een beweging</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/fysM4_H2.pdf" download="Samenvatting H2: De Eendimensionale Beweging"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/fysM4_H2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_H2.pdf')">H2: De eendimensionale beweging</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/fysM4_H3.pdf" download="Fysica 2D bewegingen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/fysM4_H3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_H3.pdf')">H3: De tweedimensionale beweging</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/fysM4_zelftest.pdf" download="Fysica Zelftest ingangsexamen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/fysM4_zelftest.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/fysM4_zelftest.pdf')">Zelftest ingangsexamen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="geschM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Geschiedenis (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/geschM4_deel1.pdf" download="Samenvatting geschiedenis deel 1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/geschM4_deel1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/geschM4_deel1.pdf')">Deel 1</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/geschM4_deel2.pdf" download="Samenvatting geschiedenis deel 2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/geschM4_deel2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/geschM4_deel2.pdf')">Deel 2</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/geschM4_deel3.pdf" download="Samenvatting geschiedenis deel 3"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/geschM4_deel3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/geschM4_deel3.pdf')">Deel 3</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="nedM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Nederlands (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/nedM4_HO2.pdf" download="Samenvatting HO 2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/nedM4_HO2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/nedM4_HO2.pdf')">HO 2</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/nedM4_TT2.pdf" download="Samenvatting Taaltaak 2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/nedM4_TT2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/nedM4_TT2.pdf')">Taaltaak 2</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="wiskM4" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Wiskunde (M4)</p>
+	<div class="popupContentInner">
+		<a href="summ_6de/wiskM4_rijreeks_schema.pdf" download="Samenvattingen rijen en reeksen schema"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_rijreeks_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_rijreeks_schema.pdf')">Schema rijen en reeksen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_discreet_schema.pdf" download="Samenvattingen discrete wiskunde"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_discreet_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_discreet_schema.pdf')">Schema discrete wiskunde</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_func_schema.pdf" download="Samenvattingen functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_func_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_func_schema.pdf')">Schema functies</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_func_irr.pdf" download="Samenvattingen irrationale functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_func_irr.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_func_irr.pdf')">Irrationale functies</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_bewijzen.pdf" download="Samenvattingen bewijzen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_bewijzen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_bewijzen.pdf')">Bewijzen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_k_overzicht.pdf" download="Samenvattingen K Overzicht"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_k_overzicht.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_overzicht.pdf')">K Overzicht</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_rijreeks.pdf" download="Samenvattingen rijen en reeksen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_rijreeks.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_rijreeks.pdf')">Rijen en reeksen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_gon_verg.pdf" download="Samenvatting goniometrische vergelijkingen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_gon_verg.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_verg.pdf')">Goniometrische vergelijkingen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_gon_verloop.pdf" download="Samenvatting goniometrische functies: verloop"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_gon_verloop.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_verloop.pdf')">Goniometrische functies: verloop</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_gon_cyclo.pdf" download="Samenvatting Cyclometrische Functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_gon_cyclo.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_cyclo.pdf')">Cyclometrische functies</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_gon_func.pdf" download="Samenvatting Goniometrische Functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_gon_func.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_gon_func.pdf')">Goniometrische functies</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_k_inleiding.pdf" download="Samenvatting K Inleiding"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_k_inleiding.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_inleiding.pdf')">K Inleiding</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_k_parabolen.pdf" download="Samenvatting K Parabolen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_k_parabolen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_parabolen.pdf')">K Parabolen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_k_ellips.pdf" download="Samenvatting K Ellips"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_k_ellips.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_ellips.pdf')">K Ellips</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_k_hyperbolen.pdf" download="Samenvatting K Hyperbolen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_k_hyperbolen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_k_hyperbolen.pdf')">K Hyperbolen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_6de/wiskM4_ict.pdf" download="Overzicht ICT Irrationale functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_6de/wiskM4_ict.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_6de/wiskM4_ict.pdf')">ICT Irrationale functies</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<!--
+
+	MODULE 5
+
+-->
+<div id="aardM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Aardrijkskunde (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="bioM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Biologie (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="chemM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Chemie (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="engM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Engels (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fransM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Frans (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fysM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Fysica (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="geschM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Geschiedenis (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="nedM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Nederlands (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="wiskM5" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Wiskunde (M5)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<!--
+
+	MODULE 6
+
+-->
+<div id="aardM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Aardrijkskunde (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="bioM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Biologie (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="chemM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Chemie (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="engM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Engels (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fransM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Frans (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fysM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Fysica (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="geschM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Geschiedenis (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="nedM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Nederlands (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="wiskM6" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Wiskunde (M6)</p>
+	<div class="popupContentInner">
+		<div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<!--
+
+	MODULE 1
+
+-->
+<div id="aardM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Aardrijkskunde (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/aardM1.pdf" download="Samenvatting Aardrijkskunde M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/aardM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM1.pdf')">Aard MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/aardM1_schema.pdf" download="Samenvatting Aardrijkskunde M1 Schema"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/aardM1_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM1_schema.pdf')">Schema H3</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="bioM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Biologie (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/bioM1.pdf" download="Samenvatting Biologie M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="summ_5de/bioM1.pdf" onclick="openSumm('summ_5de/bioM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM1.pdf')">Biologie MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="chemM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Chemie (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/chemM1.pdf" download="Samenvatting Chemie M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM1.pdf')">Chemie MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="engM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Engels (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/engM1.pdf" download="Samenvatting Engels M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM1.pdf')">Engels MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fransM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Frans (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/fransM1.pdf" download="Samenvatting Frans M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fransM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM1.pdf')">Frans MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fysM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Fysica (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/fysM1.pdf" download="Samenvatting Fysica M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fysM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM1.pdf')">Fysica MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/fysM1_kort.pdf" download="Samenvatting Fysica M1 Kort"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fysM1_kort.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM1_kort.pdf')">Verkorte Samenvatting</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="geschM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Geschiedenis (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/geshM1.pdf" download="Samenvatting Geschiedenis M1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM1.pdf')">Gesch MODULE 1</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="nedM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Nederlands (M1)</p>
+	<div class="popupContentInner">
+	  <div class="summ">
+		<font>Geen samenvattingen beschikbaar</font>
+	  </div>
+	  <div class="hline"></div>
+	</div>
+</div>
+<div id="wiskM1" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Wiskunde (M1)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/wiskM1_alg.pdf" download="Samenvatting Wiskunde M1 Algebra"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM1_alg.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM1_alg.pdf')">Algebra</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM1_struct.pdf" download="Samenvatting Wiskunde M1 Structuren"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM1_struct.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM1_struct.pdf')">Structuren</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<!--
+
+	MODULE 2
+
+-->
+<div id="aardM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Aardrijkskunde (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/aardM2.pdf" download="Samenvatting Aardrijkskunde M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/aardM2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM2.pdf')">Aard MODULE 2</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="bioM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Biologie (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/bioM2.pdf" download="Samenvatting Biologie M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/bioM2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM2.pdf')">Biologie MODULE 2</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="chemM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Chemie (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/chemM2_atom.pdf" download="Samenvatting Chemie M2 Atomen en Moleculen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM2_atom.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM2_atom.pdf')">Atomen en Moleculen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/chemM2_even.pdf" download="Samenvatting Chemie M2 Chemisch Evenwicht"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM2_even.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM2_even.pdf')">Chemisch Evenwicht</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/chemM2_even_schema.pdf" download="Samenvatting Chemie M2 Schema Chemisch Evenwicht"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM2_even_schema.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM2_even_schema.pdf')">Schema Chemisch Evenwicht</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="engM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Engels (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/engM2.pdf" download="Samenvatting Engels M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM2.pdf')">Engels MODULE 2</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fransM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Frans (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/fransM2.pdf" download="Samenvatting Frans M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fransM2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM2.pdf')">Frans MODULE 2</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fysM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Fysica (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/fysM2.pdf" download="Samenvatting Fysica M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fysM2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM2.pdf')">Fysica MODULE 2</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="geschM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Geschiedenis (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/geschM2_alt.pdf" download="Samenvatting Geschiedenis M2 Imperialisme"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM2_alt.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM2_alt.pdf')">Imperialisme</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM2.pdf" download="Samenvatting Wiskunde M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM2_strijd.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM2_strijd.pdf')">Sociale strijd</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="nedM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Nederlands (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/nedM2.pdf" download="Samenvatting Nederlands M2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM2.pdf')">Nederlands MODULE 2</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_diner.pdf" download="Samenvatting Het Diner"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_diner.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_diner.pdf')">Het Diner</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="wiskM2" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Wiskunde (M2)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/wiskM2_geo.pdf" download="Samenvatting Wiskunde M2 Geogebra"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM2_geo.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM2_geo.pdf')">Geogebra</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM2_gon.pdf" download="Samenvatting Wiskunde M2 Goniometrie"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM2_gon.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM2_gon.pdf')">Goniometrie</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM2_funct.pdf" download="Samenvatting Wiskunde M2 Functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM2_funct.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM2_funct.pdf')">Functies</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM2_complex.pdf" download="Samenvatting Wiskunde M2 Complexe Getallen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM2_complex.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM2_complex.pdf')">Complexe getallen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<!--
+
+	MODULE 3
+
+-->
+<div id="aardM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Aardrijkskunde (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/aardM3_dienst.pdf" download="Samenvatting Aardrijkskunde M3 de Aarde in Dienst van de Mens"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/aardM3_dienst.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM3_dienst.pdf')">De aarde in dienst van de mens</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/aardM3_bodem.pdf" download="Samenvatting Aardrijkskunde M3 Bodemkunde"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/aardM3_bodem.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM3_bodem.pdf')">Bodemkunde</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/aardM3_ocean.pdf" download="Samenvatting Aardrijkskunde M3 Oceanografie"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/aardM3_ocean.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/aardM3_ocean.pdf')">Oceanografie</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="bioM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Biologie (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/bioM3_meta.pdf" download="Samenvatting Biologie M3 Metabolisme"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/bioM3_meta.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM3_meta.pdf')">Metabolisme</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/bioM3_fotosynthese.pdf" download="Samenvatting Biologie M3 Fotosynthese & Celademhaling"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/bioM3_fotosynthese.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM3_fotosynthese.pdf')">Fotosynthese & Celademhaling</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/bioM3_enzymen.pdf" download="Samenvatting Biologie M3 Enzymen Schema Toepassingen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/bioM3_enzymen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/bioM3_enzymen.pdf')">Enzymen Schema Toepassingen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="chemM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Chemie (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/chemM3_moleculen.pdf" download="Samenvatting Chemie M3 Moleculen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM3_moleculen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_moleculen.pdf')">Moleculen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/chemM3_lewis.pdf" download="Het geheim voor de perfecte Lewisstructuur"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM3_lewis.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_lewis.pdf')">Het geheim voor de perfecte Lewisstructuur</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/chemM3_zuren_basen.pdf" download="Samenvatting Chemie M3 Zuren en Basen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM3_zuren_basen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_zuren_basen.pdf')">Zuren en Basen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/chemM3_examen.pdf" download="Samenvatting Chemie M3 Examen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/chemM3_examen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/chemM3_examen.pdf')">Examen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="engM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Engels (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/engM3_voc.pdf" download="Samenavtting Engels M3 Vocabulary"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_voc.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_voc.pdf')">Vocabulary</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/engM3_simp_fut.pdf" download="Samenvatting Engels M3 Simple Future"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_simp_fut.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_simp_fut.pdf')">Simple Future</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/engM3_lang_evo.pdf" download="Samenvatting Engels M3 Language Evolution"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_lang_evo.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_lang_evo.pdf')">Language Evolution</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/engM3_new_words.pdf" download="Samenvatting Engels M3 Creating New Words"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_new_words.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_new_words.pdf')">Creating New Words</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/engM3_suffix_en_em.pdf" download="Samenvatting Engels M3 Suffix En/Em"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_suffix_en_em.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_suffix_en_em.pdf')">Suffix En/Em</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/engM3_frank_anal.pdf" download="Samenvatting Engels M3 Frankenstein Analysis"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_frank_anal.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_frank_anal.pdf')">Frankenstein Analysis</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/engM3_frank_summ.pdf" download="Samenvatting Engels M3 Frankenstein Summary"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/engM3_frank_summ.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/engM3_frank_summ.pdf')">Frankenstein Summary</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fransM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Frans (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/fransM3_VP_1.pdf" download="Samenvatting Frans M3 Verbe Pronominaux 1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fransM3_VP_1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM3_VP_1.pdf')">Verbe Pronominaux 1</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/fransM3_VP_2.pdf" download="Samenvatting Frans M3 Verbe Pronominaux 2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fransM3_VP_2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM3_VP_2.pdf')">Verbe Pronominaux 2</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/fransM3_aard_VZ.pdf" download="Samenvatting Frans M3 Aardrkijkskundige Voorzetsels"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fransM3_aard_VZ.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fransM3_aard_VZ.pdf')">Frans: Aardrijkskundige Voorzetsels</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="fysM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Fysica (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/fysM3_H6_7.pdf" download="Samenvatting Fysica M3 Hoofdstuk 6/7"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" id="ent" onclick="openSumm('summ_5de/fysM3_H6_7.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM3_H6_7.pdf')">Hoofdstuk 6 & 7</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/fysM3_lorentz.pdf" download="Samenvatting Fysica M3 Hoofdstuk 8"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fysM3_lorentz.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM3_lorentz.pdf')">Hoofdstuk 8</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/fysM3_h9.pdf" download="Samenvatting Fysica M3 Hoofdstuk 9"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/fysM3_h9.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/fysM3_h9.pdf')">Hoofdstuk 9</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="geschM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Geschiedenis (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/geschM3_stroom.pdf" download="Samenvatting Geschiedenis M3 Stroom & Tegenstroom in Cultuur"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM3_stroom.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_stroom.pdf')">Stroom & tegenstroom in cultuur</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/geschM3_WO1.pdf" download="Samenvatting Geschiedenis M3 WOI + Kapitalisme in Crisis"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM3_WO1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_WO1.pdf')">WOI + Kapitalisme in crisis</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/geschM3_democratie.pdf" download="Samenvatting Geschiedenis M3 Democratievormen na WOI"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM3_democratie.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_democratie.pdf')">Democratievormen na WOI</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/geschM3_kunst.pdf" download="Samenvatting Geschiedenis M3 Schema & Flowchart Kunststromingen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/geschM3_kunst.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/geschM3_kunst.pdf')">Schema & flowchart kunststromingen</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="nedM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Nederlands (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/nedM3_mondeling.pdf" download="Samenvatting Nederlands M3 Mondeling Uitgeschreven"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_mondeling.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_mondeling.pdf')">Mondeling uitgeschreven</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_analyse.pdf" download="Samenvatting Nederlands M3 Literaire Analyse"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_analyse.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_analyse.pdf')">Literaire analyse</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_analyse_oef.pdf" download="Samenvatting Nederlands M3 Analyse Voorbeeldoefeningen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_analyse_oef.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_analyse_oef.pdf')">Voorbeeldoefeningen analyse</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_schema_stromingen.pdf" download="Samenvatting Nederlands M3 Schema Literaire Stromingen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_schema_stromingen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_schema_stromingen.pdf')">Schema literaire stromingen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_kort_schema_stromingen.pdf" download="Samenvatting Nederlands M3 Kort Schema Literaire Stromingen"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_kort_schema_stromingen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_kort_schema_stromingen.pdf')">Kort schema literaire stromingen</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_naturalisme.pdf" download="Samenvatting Nederlands M3 Infofiche Naturalisme"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_naturalisme.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_naturalisme.pdf')">Infofiche naturalisme</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_poëzie.pdf" download="Samenvatting Nederlands M3 Schema Poëzie"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_poëzie.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_poëzie.pdf')">Schema poëzie</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_woordenlijst.pdf" download="Samenvatting Nederlands M3 Woordenlijst"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_woordenlijst.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_woordenlijst.pdf')">Woordenlijst</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_rev.pdf" download="Samenvatting Nederlands M3 Tekstrevisie"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_rev.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_rev.pdf')">Tekstrevisie</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_lyriek.pdf" download="Samenvatting Nederlands M3 Lyriek"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_lyriek.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_lyriek.pdf')">Lyriek</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_lyriek_test.pdf" download="Zelftest Nederlands M3 Lyriek"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_lyriek_test.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_lyriek_test.pdf')">Zelftest Lyriek</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_zomerhuis.pdf" download="Samenvatting zomerhuis met zwembad"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_zomerhuis.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_zomerhuis.pdf')">Zomerhuis met zwembad</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/nedM3_max.pdf" download="Samenvatting Nederlands M3 Max Havelaar"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/nedM3_max.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/nedM3_max.pdf')">Max Havelaar</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="wiskM3" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">Wiskunde (M3)</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/wiskM3_verloop.pdf" download="Samenvatting Wiskunde M3 Verloop van Functies"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_verloop.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_verloop.pdf')">Verloop van Functies</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_limit.pdf" download="Samenvatting Wiskunde M3 Limieten"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_limit.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_limit.pdf')">Limieten</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_ruimte_H1-3.pdf" download="Samenvatting Wiskunde M3 Ruimtemeetkunde H1-3"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_H1-3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_H1-3.pdf')">Ruimtemeetkunde H1-3</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_ruimte_H4-5.pdf" download="Samenvatting Wiskunde M3 Ruimtemeetkunde H4-5"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_H4-5.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_H4-5.pdf')">Ruimtemeetkunde H4-5</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_ruimte_H6-7.pdf" download="Samenvatting Wiskunde M3 Ruimtemeetkunde H6-7"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_H6-7.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_H6-7.pdf')">Ruimtemeetkunde H6-7</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_ruimte_overzicht.pdf" download="Samenvatting Wiskunde M3 Overzicht Ruimtemeetkunde"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_ruimte_overzicht.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_ruimte_overzicht.pdf')">Overzicht Ruimtemeetkunde</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_afg_1.pdf" download="Samenvatting Wiskunde M3 Afgeleiden 1"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_afg_1.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_1.pdf')">Afgeleiden 1</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_afg_2.pdf" download="Samenvatting Wiskunde M3 Afgeleiden 2"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_afg_2.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_2.pdf')">Afgeleiden 2</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_afg_3.pdf" download="Samenvatting Wiskunde M3 Afgeleiden 3"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_afg_3.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_3.pdf')">Afgeleiden 3</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_afg_benaderen.pdf" download="Samenvatting Wiskunde M3 Afgeleiden Benadering"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_afg_benaderen.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_afg_benaderen.pdf')">Afgeleiden: Korte Benaderings Methode</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_zelftest_cont.pdf" download="Zelftest Continuïteit"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_cont.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_cont.pdf')">Zelftest Continuïteit</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_zelftest_analyse.pdf" download="Zelftest Analyse"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_analyse.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_analyse.pdf')">Zelftest Analyse</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_zelftest_limit.pdf" download="Zelftest Limieten"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_limit.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_limit.pdf')">Zelftest Limieten</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/wiskM3_zelftest_verloop.pdf" download="Zelftest Verloop"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/wiskM3_zelftest_verloop.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/wiskM3_zelftest_verloop.pdf')">Zelftest Verloop</a>
+		</div>
+		<div class="hline"></div>
+	</div>
+</div>
+<div id="LO" class="popup_content">
+	<img class="cross" src="icons/cross.png" onclick="closeAll()">
+	<p class="titel_popup">LO</p>
+	<div class="popupContentInner">
+		<a href="summ_5de/summ_LO.pdf" download="Samenvatting LO"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/summ_LO.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/summ_LO.pdf')">Samenvatting LO</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/summ_LO_reani.pdf" download="Samenvatting LO Reanimatie"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/summ_LO_reani.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/summ_LO_reani.pdf')">Reanimatie</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="summ_5de/summ_LO_test.pdf" download="LO Zelftest"><img class="dl" src="icons/dl.png" alt="download"></a>
+		<div class="summ">
+		<a href="#" onclick="openSumm('summ_5de/summ_LO_test.pdf', 'https://docs.google.com/gview?embedded=true&url=https://samenvattingen.github.io/summ_5de/summ_LO_test.pdf')">LO Zelftest</a>
+		</div>
+		<div class="hline"></div>
+		<br>
+		<a href="https://www.youtube.com/watch?v=pS-QZ0EA5tM" target="blank">Video Stabiele Zijlig</a>
+		<div class="hline"></div>
+		<br>
+		<a href="https://www.youtube.com/watch?v=Zt9yqRmVPG8" target="blank">Video Rautekgreep</a>
+		<div class="hline"></div>
+		<br>
+		<a href="https://www.youtube.com/watch?v=7OeNunGjpk0" target="blank">Video Kruisverband</a>
+		<div class="hline"></div>
+		<br>
+		<a href="https://www.youtube.com/watch?v=g8nWJxYcB-Y" target="blank">Video Spiraalverband</a>
+		<div class="hline"></div>
+	</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118570148-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-118570148-1');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="site.js"></script>
+</body>
+</html> 
