@@ -61,6 +61,7 @@ img:hover {
 	height: 90%;
 	width: 100%;
 	position: absolute;
+	background-color: white;
 }
 .obj {
 	bottom: 2%;
@@ -399,6 +400,7 @@ img:hover {
 	width: 30%;
 	border-radius: 3px;
 	border: 1px solid #C70450;
+	outline-color: transparent;
 }
 #kiesJaar option {
 	padding: 2px;
