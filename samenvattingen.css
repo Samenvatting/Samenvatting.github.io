@@ -124,7 +124,7 @@ img:hover {
 	margin: 0;
 }
 .changeText {
-  margin-left: 3%;
+    margin-left: 3%;
 }
 .nav {
 	display: flex;
@@ -272,10 +272,10 @@ img:hover {
 	display: none;
 }
 .list5 { 
-	display: block;
+	display: none;
 }
 .list6 {
-	display: none;
+	display: block;
 }
 .closebtn {
 	float: right;

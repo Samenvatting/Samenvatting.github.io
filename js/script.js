@@ -60,7 +60,7 @@ function openNav() {
 
         }
         else if ($("#kiesJaar").val() == 6) {
-    	    $(".m5").css ({
+    	    $(".m6").css ({
     		    "background-color": "rgba(0,0,0,0.2)"
     		});
         }
@@ -82,7 +82,8 @@ function openSumm(summ, mobileSumm) {
     }
     else {
         $("#pdf").attr("data", summ);
-    }    
+    }
+        
     closeTopNav_check = true;
     closeNav();
     closeAll();
