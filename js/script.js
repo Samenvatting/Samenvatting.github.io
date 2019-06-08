@@ -32,20 +32,9 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-document.onkeydown = checkKeyDown;
-
-function checkKeyDown(e) {
-    e = e || window.event;
-    if (e.keyCode == '13') {
-        validation();
-    }
-}
-
 var nav_check = false;
 var module_check = false;
 var popup_check = false;
-var lock_value = "9102";
-var password = "";
 
 function openNav() {
     $("#navBar").animate({
@@ -78,10 +67,12 @@ function closeNav() {
 var closeTopNav_check = false;
 function openSumm(summ, mobileSumm) {
     if (isMobile.any()) {
-        $("#pdf").attr("data", mobileSumm);
+        //$("#pdf").attr("data", mobileSumm);
+        $("#pdf").attr("data", "blank.pdf");
     }
     else {
-        $("#pdf").attr("data", summ);
+        //$("#pdf").attr("data", summ);
+        $("#pdf").attr("data", "blank.pdf");
     }
         
     closeTopNav_check = true;
@@ -590,57 +581,6 @@ function changeJaar() {
     });
 };
 
-function help() {
-	$(".titel3").text("Sluit help menu");
-    $("#introText").css({
-        "display": "none"
-    });
-    $("#helpChoice").css({
-        "display": "block"
-    });
-}
-function jaarHelp() {
-    $("#helpChoice").css({
-        "display": "none"
-    });
-    $("#jaarHelp").css({
-        "display": "block"
-    });
-}
-function summHelp() {
-    $("#helpChoice").css({
-        "display": "none"
-    });
-    $("#summHelp").css({
-        "display": "block"
-    });
-}
-function summHelp2() {
-    $("#helpChoice").css({
-        "display": "none"
-    });
-    $("#summHelp2").css({
-        "display": "block"
-    });
-}
-function lesHelp() {
-    $("#helpChoice").css({
-        "display": "none"
-    });
-    $("#lesHelp").css({
-        "display": "block"
-    });
-}
-function closeHelp() {
-	$(".titel3").text("SAMENVATTINGEN");
-    $("#introText").css({
-        "display": "block"
-    });
-    $(".helpTxt").css({
-        "display": "none"
-    });
-}
-
 function rooster() {
     if (isMobile.any()) {
         $("#introText").css({
@@ -671,22 +611,4 @@ function rooster2() {
         "padding-left": "1%",
         "padding-right": "1%"
     });
-}
-
-function input_check() {
-    var password_check = document.getElementById("lock_val").value;
-    if((Number(password_check) >= 0 && password_check.length > 0 && password_check.charAt(0) != "+" && password_check.charAt(0) != " " && password_check.charAt(1) != " " && password_check.charAt(2) != " " && password_check.charAt(3) != " ") || password_check.length == 0){
-        password = document.getElementById("lock_val").value;
-    }else{
-        document.getElementById("lock_val").value = password;
-    }
-}
-
-function validation(){
-    if ($("#lock_val").val() == lock_value) {
-        window.location = "samenvattingen.html";
-    }
-    else {
-        document.getElementById("lock_val").value = "";
-    }
 }
